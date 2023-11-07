@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
     [SerializeField] private AudioSource _bgmSource, _sfxSource;
-    [SerializeField] private AudioClip _clip;
+    [SerializeField] private AudioClip _sfxClip;
 
     void Awake()
     {
@@ -28,8 +27,13 @@ public class SoundManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _sfxSource.PlayOneShot(_clip);
+            _sfxSource.PlayOneShot(_sfxSource.clip);
         }
+    }
+
+    public void CannonShot()
+    {
+        _sfxSource.PlayOneShot(_sfxClip);
     }
 
     public void ChangeBGMVolume(float value)
