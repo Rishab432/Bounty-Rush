@@ -1199,6 +1199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 53805498}
   _pauseButton: {fileID: 224386080}
+  _player: {fileID: 1010730823}
 --- !u!4 &1002533578
 Transform:
   m_ObjectHideFlags: 0
@@ -1248,6 +1249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _rb2D: {fileID: 0}
+  _collider2D: {fileID: 0}
 --- !u!61 &1010730825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1291,7 +1293,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 1}
+  m_Size: {x: 4.25, y: 3.6}
   m_EdgeRadius: 0
 --- !u!50 &1010730826
 Rigidbody2D:
