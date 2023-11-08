@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public GameObject PlayerBulletGo;
     public GameObject BulletFiringPos;
 
+    public AudioSource FireSound;
+
     [SerializeField] private float _speed = 5f;
 
     [SerializeField] private Rigidbody2D _rb2D;
@@ -29,6 +31,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
+            FireSound.Play();
+
             GameObject bullet = (GameObject)Instantiate(PlayerBulletGo);
             bullet.transform.position = BulletFiringPos.transform.position;
         }

@@ -1777,6 +1777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767356941}
   - component: {fileID: 1767356943}
+  - component: {fileID: 1767356944}
   m_Layer: 5
   m_Name: SFX Volume Slider
   m_TagString: Untagged
@@ -1857,6 +1858,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1767356944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767356940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81eb6b5f8fdabb341adc9257d807e9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxSlider: {fileID: 1767356943}
+  _sfxSliderText: {fileID: 633763891}
 --- !u!1 &1793887477
 GameObject:
   m_ObjectHideFlags: 0
