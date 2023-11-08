@@ -22,7 +22,7 @@ public class EnemyGun : MonoBehaviour
 
     void FireEnemyBullet()
     {
-        GameObject playerShip = GameObject.Find("PlayerGO");
+        GameObject playerShip = GameObject.Find("Player");
 
         if (playerShip != null)
         {
