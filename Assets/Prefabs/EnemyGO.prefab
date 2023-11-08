@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588409144468364006}
   - component: {fileID: 4956624142990312917}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyGunGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,9 +56,9 @@ GameObject:
   - component: {fileID: 5536620072085001251}
   - component: {fileID: 652975875264068886}
   - component: {fileID: 6431126377220184656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyGO
-  m_TagString: Untagged
+  m_TagString: EnemyShipTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 8092604600924345109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4, y: 3.16, z: 0}
+  m_LocalPosition: {x: -1.4, y: 3.16, z: -1}
   m_LocalScale: {x: 0.5558, y: 0.4909, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

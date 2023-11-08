@@ -65,4 +65,16 @@ public class PlayerController : MonoBehaviour
         }
         _rb2D.MovePosition(_speed * Time.fixedDeltaTime * _movement + _rb2D.position);
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if ((col.tag == "EnemyShipTag")  || (col.tag == "EnemyBulletTag"))
+        {
+            Debug.Log("nigg");
+          //  HealthBar.Instance.TakeDamage();
+            Destroy(gameObject);
+        }
+
+    }
+
 }

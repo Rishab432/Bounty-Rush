@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
+    public static HealthBar Instance;
     [SerializeField] private Image _healthBar;
     [SerializeField] private float _healthAmount = 100f;
     private const float _damage = 10f;
 
+    void Start()
+    {
+        Instance = this;
+    }
 
     public void TakeDamage()
     {
