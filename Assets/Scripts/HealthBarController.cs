@@ -19,5 +19,8 @@ public class HealthBar : MonoBehaviour
     {
         _healthAmount -= _damage;
         _healthBar.fillAmount = _healthAmount / 100f;
+        if (_healthAmount <= 0 ) {
+            GameOverScreen.Instance.GameOver();
+        }
     }
 }

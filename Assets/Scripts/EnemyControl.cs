@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D _rb2D;
+    [SerializeField] private BoxCollider2D _collider2D;
     float speedx;
     float speedy;
 
@@ -11,6 +13,8 @@ public class EnemyControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _rb2D = GetComponent<Rigidbody2D>();
+        _collider2D = GetComponent<BoxCollider2D>();
         speedx = 2f;
         speedy = 0.2f;
     }
@@ -34,10 +38,11 @@ public class EnemyControl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ((col.tag == "PlayerShipTag") || (col.tag == "PlayerBulletTag"))
+        if ((col.CompareTag("PlayerShipTag")) || (col.CompareTag("PlayerBulletTag")))
         {
+            Debug.Log("i died");
             Destroy(gameObject);
+            ScoreController.Instance.IncreaseScore();
         }
-
     }
 }

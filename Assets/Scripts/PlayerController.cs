@@ -68,13 +68,9 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ((col.tag == "EnemyShipTag")  || (col.tag == "EnemyBulletTag"))
+        if ((col.CompareTag("EnemyShipTag")) || (col.CompareTag("EnemyBulletTag")))
         {
-            Debug.Log("nigg");
-          //  HealthBar.Instance.TakeDamage();
-            Destroy(gameObject);
+            HealthBar.Instance.TakeDamage();
         }
-
     }
-
 }

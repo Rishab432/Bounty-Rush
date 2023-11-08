@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ScoreScript : MonoBehaviour
+public class ScoreController : MonoBehaviour
 {
-    public static ScoreScript Instance;
+    public static ScoreController Instance;
     private static int _scoreValue;
     [SerializeField] private TextMeshProUGUI _score;
 

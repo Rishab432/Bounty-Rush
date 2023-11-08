@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _pauseButton;
     [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _enemy;
     public static bool isPaused;
 
     void Start()
@@ -23,6 +24,7 @@ public class PauseMenu : MonoBehaviour
         _pauseMenu.SetActive(true);
         _pauseButton.SetActive(false);
         _player.SetActive(false);
+        _enemy.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -32,6 +34,7 @@ public class PauseMenu : MonoBehaviour
         _pauseMenu.SetActive(false);
         _pauseButton.SetActive(true);
         _player.SetActive(true);
+        _enemy.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
