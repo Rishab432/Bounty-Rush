@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-
-    float speed;
+    [SerializeField] private Rigidbody2D _rb2D;
+    [SerializeField] private CircleCollider2D _collider2D;
+    const float _speed = 8f;
     Vector2 _direction;
     bool isReady;
 
     void Awake()
     {
-        speed = 5f;
+        _rb2D = GetComponent<Rigidbody2D>();
+        _collider2D = GetComponent<CircleCollider2D>();
         isReady = false;
     }
 
@@ -37,7 +39,7 @@ public class EnemyBullet : MonoBehaviour
         {
             Vector2 position = transform.position;
 
-            position += _direction * speed * Time.deltaTime;
+            position += _speed * Time.deltaTime * _direction;
             transform.position = position;
 
             Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));

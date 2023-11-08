@@ -40,7 +40,6 @@ public class EnemyControl : MonoBehaviour
     {
         if ((col.CompareTag("PlayerShipTag")) || (col.CompareTag("PlayerBulletTag")))
         {
-            Debug.Log("i died");
             Destroy(gameObject);
             ScoreController.Instance.IncreaseScore();
         }

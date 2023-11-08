@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 677722826453545221}
   - component: {fileID: 8533904239367447617}
-  - component: {fileID: 6442502138946316414}
+  - component: {fileID: 8096956863070881575}
   - component: {fileID: 3199506171543610802}
+  - component: {fileID: 6442502138946316414}
   m_Layer: 6
   m_Name: EnemyBulletGO
   m_TagString: EnemyBulletTag
@@ -86,18 +87,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6442502138946316414
-MonoBehaviour:
+--- !u!50 &8096956863070881575
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4275455984225487366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 455f523af3de93540a9f7cf90aecee52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &3199506171543610802
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -133,3 +149,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.1}
   serializedVersion: 2
   m_Radius: 2.3
+--- !u!114 &6442502138946316414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4275455984225487366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455f523af3de93540a9f7cf90aecee52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb2D: {fileID: 0}
+  _collider2D: {fileID: 0}

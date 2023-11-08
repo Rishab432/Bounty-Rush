@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private Rigidbody2D _rb2D;
+    [SerializeField] private CircleCollider2D _collider2D;
+    private const float _speed = 8f;
 
-    public float speed = 8f;
-    void Start()
+    void Awake()
     {
-        
+        _rb2D = GetComponent<Rigidbody2D>();
+        _collider2D = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
@@ -17,7 +20,7 @@ public class PlayerBullet : MonoBehaviour
     {
         Vector2 position = transform.position;
 
-        position = new Vector2(position.x, position.y + speed * Time.deltaTime);
+        position = new Vector2(position.x, position.y + _speed * Time.deltaTime);
 
         transform.position = position;
 
