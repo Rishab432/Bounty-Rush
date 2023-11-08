@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject PlayerBulletGo;
+    public GameObject BulletFiringPos;
+    
     [SerializeField] private float _speed = 5f;
 
     [SerializeField] private Rigidbody2D _rb2D;
@@ -24,6 +27,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown("space"))
+        {
+            GameObject bullet = (GameObject)Instantiate(PlayerBulletGo);
+            bullet.transform.position = BulletFiringPos.transform.position;
+        }
+
         _movement.x = Input.GetAxis("Horizontal");
         _movement.y = Input.GetAxis("Vertical");
     }
